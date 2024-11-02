@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Nunito, Roboto, Arial, sans-serif;
+    line-height: 27px;
+    background-color:#d6e3fa;
+    color: #000d2e;
+    height: 100vh;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: #d2daee;
+    background-color:#1a3067;
+
+}
+
+.right-header > button {
+    background-color:#c7dffa;
+    color:#1a3067;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.left-header{
+    display: flex;
+}
+.banking-categories{
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+}
+.head-color{
+    color: #1a3067;
+}
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    min-height: calc(100vh - 100px);/* height to fit viewport - header and footer */
+    background-image: url(assets/banking-bg.png);
+}
+.main-middle {
+    overflow-y:scroll; /* for scrolling/ auto also works */
+    background-color: rgba(199, 223, 250, 0.4);
+
+}
+
+.sidebar-right, .sidebar-left {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(199, 223, 250, 0.4);
+    text-align: center;
+    flex-direction: column;
+    border: 1px solid rgb(26, 48, 103);
+    height:m;
+
+}
+
+.sidebar-right > div, .sidebar-left > div{
+    border: 1px solid #1a3067;
+    border-radius: 10px;
+    margin: 5px;
+    background-color:#97ade4;
+}
+
+
+footer{
+
+    background-color:#1a3067;
+    color: #d2daee;
+
+    /*background: linear-gradient(to bottom, #d6dfef, #1a3067);*/
+
+}
+.footer-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer a {
+    color: #d2daee; /*fix the color that comes with link*/
+    text-decoration: none; /* Removes the automatic underline */
+}
