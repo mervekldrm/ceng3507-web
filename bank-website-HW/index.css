@@ -24,12 +24,19 @@ header {
 
 }
 .click {
-    background-color: #c7dffa;
+    background-color: rgb(199, 223, 250);
     color: #1a3067;
     text-align: center;
-    border-radius: 8px;
+    border: 2px solid #000d2e;
+    box-shadow: 6px 6px 3px 1px rgba(98, 148, 205, 0.479);    border-radius: 8px;
     padding: 8px 16px;
     margin: 5px;
+}
+.right-header>.click:hover{
+    color:#97ade4;
+    background-color:#1a3067;
+    box-shadow: none;
+
 }
 
 .left-header {
@@ -75,12 +82,18 @@ header {
 }
 
 .sidebar-right > div, .sidebar-left > div {
-    border: 1px solid #1a3067;
+    border: 1px solid #97ade4;
     border-radius: 10px;
     text-align: center;
     margin: 5px;
-    background-color: #97ade4;
+    color: #c7d3f1;
+    background-color: #1a3067;
     padding: 10px;
+}
+.sidebar-left>.click:hover, .sidebar-right>.click:hover{
+    color:#1a3067 ;
+    background-color: #c7d3f1;
+    box-shadow: 6px 6px 3px 1px rgba(0, 13, 46, 0.479);    border-radius: 8px;
 }
 
 footer {
@@ -100,6 +113,9 @@ footer {
 footer a {
     color: #d2daee;
     text-decoration: none;
+}
+.footer-bottom{
+    text-align: center;
 }
 
 .section-of-middle{
@@ -130,9 +146,6 @@ footer a {
 
 /* Tablets and large phones */
 @media screen and (max-width: 768px) {
-    body {
-        width: 100%;
-    }
     
     .main-container {
         flex-direction: column;
@@ -141,8 +154,8 @@ footer a {
     .main-middle {
         max-height: none;
         overflow-y: visible;
-    }
-    
+    } 
+
     .banking-categories {
         display: none;
     }
@@ -152,10 +165,6 @@ footer a {
         gap: 5px;
     }
     
-    .footer-top {
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-    }
     
     .sidebar-left, .sidebar-right {
         flex-direction: row;
@@ -188,17 +197,8 @@ footer a {
         width: 100%;
     }
     
-    .click {
-        width: 100%;
-        margin: 5px 0;
-    }
-    
-    .footer-top {
-        grid-template-columns: 1fr;
-    }
-    
     .sidebar-left > div, .sidebar-right > div {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 calc(50% - 30px);
         min-width: 120px;
     }
     
@@ -214,8 +214,8 @@ footer a {
     }
     
     .left-header img {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
     }
     
     .sidebar-left > div, .sidebar-right > div {
@@ -248,12 +248,7 @@ footer a {
 @media screen and (max-width: 320px) {
     body {
         font-size: 14px;
-        line-height: 24px;
-    }
-    
-    .click {
-        padding: 5px 10px;
-        font-size: 0.85em;
+        line-height: 23px;
     }
     
     .main-container {
@@ -263,20 +258,5 @@ footer a {
     
     .section-of-middle {
         margin-bottom: 15px;
-    }
-}
-
-/* Handle height-based media queries */
-@media screen and (max-height: 600px) {
-    .main-middle {
-        max-height: calc(100vh - 150px);
-    }
-    
-    header {
-        padding: 5px;
-    }
-    
-    footer {
-        padding: 10px 0;
     }
 }
