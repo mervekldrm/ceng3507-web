@@ -4,11 +4,11 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Nunito, Roboto, Arial, sans-serif;
+    font-family: Nunito, Roboto, Arial, sans-serif; /*new fonts added from google fonts and fallback fonts */
     line-height: 27px;
     background-color: #d6e3fa;
     color: #000d2e;
-    width: fit-content;
+    width: fit-content; /* for avoiding overflow on horizontal, 100% didn't work properly */
 }
 
 header {
@@ -28,21 +28,25 @@ header {
     color: #1a3067;
     text-align: center;
     border: 2px solid #000d2e;
-    box-shadow: 6px 6px 3px 1px rgba(98, 148, 205, 0.479);    border-radius: 8px;
+    box-shadow: 6px 6px 3px 1px rgba(98, 148, 205, 0.479);
+    border-radius: 8px; /* for rounded corners */
     padding: 8px 16px;
     margin: 5px;
 }
+
 .right-header>.click:hover{
     color:#97ade4;
     background-color:#1a3067;
     box-shadow: none;
-
 }
 
+.right-header, .left-header {
+    margin: 10px;
+}
 .left-header {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* for adding space between elements */
 }
 
 .banking-categories {
@@ -52,7 +56,7 @@ header {
 }
 
 .main-container {
-    flex: 1;
+    flex: 1; /* for taking remaining space */
     display: flex;
     gap: 15px;
     padding: 20px;
@@ -63,7 +67,9 @@ header {
 }
 
 .main-middle {
-    flex: 3;
+    flex: 3; /* => shorthand for flex-grow/shrink/basis 
+    =>for taking more space 
+    => sets the flex item 3 times as much as the flex item which is flex-grow:1 */
     overflow-y: auto; /* scroll also woorks */
     background-color: rgba(178, 208, 243, 0.7);
     padding: 20px;
@@ -137,39 +143,39 @@ footer a {
 @media screen and (max-width: 768px) {
     
     .main-container {
-        flex-direction: column;
+        flex-direction: column; /* makes divs(sidebars and main-middle) vertical */
     }
     
     .main-middle {
         max-height: none;
-        overflow-y: visible;
+        overflow-y: visible; /* removes the scroll */
     } 
 
-    .banking-categories {
-        display: none;
-    }
-    
     .right-header {
-        display: flex;
+        display: flex; /* makes the right header elements horizontal */
         gap: 5px;
     }
     
     
     .sidebar-left, .sidebar-right {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: row; /* makes the divs inside sidebars horizontal */
+        flex-wrap: wrap; /* =>flex-wrap is determines whether the flex container is single/multi-line
+        => Allow flex items to wrap onto multiple lines if they overflow the container */
         justify-content: center;
     }
     
     .sidebar-left > div, .sidebar-right > div {
-        flex: 1 1 calc(33.33% - 20px);
+        flex: 1 1 calc(33.33% - 20px); /* 3 items in a row */
         min-width: 150px;
     }
 }
 
 @media screen and (max-width: 576px) {
+    .banking-categories {
+        display: none; /* hides the banking categories for smaller screens */
+    }
     header {
-        flex-direction: column;
+        flex-direction: column; 
         align-items: center;
         gap: 10px;
         padding: 15px;
@@ -197,7 +203,7 @@ footer a {
 
 @media screen and (max-width: 375px) {
     header {
-        padding: 10px;
+        padding: 10px; 
     }
     
     .left-header img {
@@ -206,7 +212,7 @@ footer a {
     }
     
     .sidebar-left > div, .sidebar-right > div {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* 1 item in a row */
     }
     
     .main-container, .section-of-middle {
