@@ -131,21 +131,9 @@ footer a {
     margin-bottom: 15px;
 }
 
+
 /* Media query for Responsiveness */
-@media screen and (max-width: 1024px) {
-    .banking-categories {
-        gap: 10px;
-    }
-    
-    .main-container {
-        gap: 10px;
-        padding: 15px;
-    }
-    
 
-}
-
-/* Tablets and large phones */
 @media screen and (max-width: 768px) {
     
     .main-container {
@@ -179,7 +167,6 @@ footer a {
     }
 }
 
-/* Medium phones */
 @media screen and (max-width: 576px) {
     header {
         flex-direction: column;
@@ -208,7 +195,6 @@ footer a {
     }
 }
 
-/* Small phones */
 @media screen and (max-width: 375px) {
     header {
         padding: 10px;
@@ -223,16 +209,8 @@ footer a {
         flex: 1 1 100%;
     }
     
-    .main-container {
+    .main-container, .section-of-middle {
         padding: 10px;
-    }
-    
-    .section-of-middle {
-        padding: 10px;
-    }
-    
-    .head-color {
-        font-size: 1.2em;
     }
     
     footer {
@@ -242,22 +220,5 @@ footer a {
     .footer-top {
         gap: 10px;
         padding: 0 10px;
-    }
-}
-
-/* Handle very small screens */
-@media screen and (max-width: 320px) {
-    body {
-        font-size: 14px;
-        line-height: 23px;
-    }
-    
-    .main-container {
-        gap: 8px;
-        padding: 8px;
-    }
-    
-    .section-of-middle {
-        margin-bottom: 15px;
     }
 }
